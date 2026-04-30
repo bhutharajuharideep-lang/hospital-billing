@@ -1,0 +1,37 @@
+#%RAML 1.0
+title: post hospital billing 
+version: v1
+/billing:
+  post:
+    description: Create a new hospital bill
+    body:
+      application/json:
+        type: object
+        properties:
+          patientId:
+            type: string
+            required: true
+          patientName:
+            type: string
+          Charges:
+            type: number
+        example:
+          {
+            "patientId": "P123",
+            "patientName": "mohan Kumar",
+            "Charges": 1500,
+            
+          }
+
+    responses:
+      201:
+        description: Bill created successfully
+        body:
+          application/json:
+            example:
+              {
+                "message": "Bill created successfully",
+                "billId": "B456"
+              }
+
+      

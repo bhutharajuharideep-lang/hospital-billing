@@ -1,0 +1,8 @@
+%dw 2.0
+
+type auto_75c5b4b6_686b_46c5_b8cd_7319cde5a64c_Input_Payload = {|
+  message: String, 
+  billId: String
+|} {"mediaType": "application/json",
+"encoding": "UTF-8"}
+
